@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlackStone.Application\BlackStone.Application.csproj" />
     <ProjectReference Include="..\BlackStone.Core\BlackStone.Core.csproj" />
     <ProjectReference Include="..\BlackStone.Persistance\BlackStone.Persistance.csproj" />
   </ItemGroup>

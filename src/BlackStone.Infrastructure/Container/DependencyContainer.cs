@@ -1,4 +1,6 @@
-﻿using BlackStone.Core.Interfaces;
+﻿using BlackStone.Application.Interfaces;
+using BlackStone.Application.Services;
+using BlackStone.Core.Interfaces;
 using BlackStone.Infrastructure.MemoryCache;
 using BlackStone.Persistance.Repositories;
 
@@ -12,11 +14,11 @@ namespace BlackStone.Infrastructure.Container {
 			ApploggerRegistration(services);
 		}
 		private static void ServicesRegistration(IServiceCollection services) {
-			//services.AddTransient<IAccountTypeService, AccountTypeService>();
-			//services.AddTransient<ICategoryService, CategoryService>();
-			//services.AddTransient<IUserService, UserService>();
-			//services.AddTransient<IRefreshTokenService, RefreshTokenService>();
-			//services.AddTransient<ILoginLogService, LoginLogService>();
+			services.AddTransient<IAccountTypeService, AccountTypeService>();
+			services.AddTransient<ICategoryService, CategoryService>();
+			services.AddTransient<IUserService, UserService>();
+			services.AddTransient<IRefreshTokenService, RefreshTokenService>();
+			services.AddTransient<ILoginLogService, LoginLogService>();
 		}
 		private static void RepositoryRegistration(IServiceCollection services) {
 			//services.AddTransient<IBaseRepository, BaseRepository>();
