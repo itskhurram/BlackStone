@@ -1,9 +1,7 @@
 ﻿using BlackStone.Core.Base;
 
-namespace BlackStone.Core.Entities
-{
-	public class MembershipPlan : EntityBase
-	{
+namespace BlackStone.Core.Entities {
+	public class MembershipPlan : EntityBase {
 		#region private declarations
 		private long membershipPlanId;
 		private string? membershipPlanName;
@@ -13,46 +11,40 @@ namespace BlackStone.Core.Entities
 		private string? feature4;
 		#endregion
 
-		public long MembershipPlanId
-		{
-			get => membershipPlanId; set
-			{
+		public long MembershipPlanId {
+			get => membershipPlanId; 
+			set {
 				membershipPlanId = value;
 				EntityModified();
 			}
 		}
-		public string MembershipPlanName
-		{
-			get => membershipPlanName; set
-			{
+		public string? MembershipPlanName {
+			get => membershipPlanName;
+			set {
 				membershipPlanName = value; EntityModified();
 			}
 		}
-		public string Feature1
-		{
-			get => feature1; set
-			{
+		public string? Feature1 {
+			get => feature1;
+			set {
 				feature1 = value; EntityModified();
 			}
 		}
-		public string Feature2
-		{
-			get => feature2; set
-			{
+		public string? Feature2 {
+			get => feature2;
+			set {
 				feature2 = value; EntityModified();
 			}
 		}
-		public string Feature3
-		{
-			get => feature3; set
-			{
+		public string? Feature3 {
+			get => feature3;
+			set {
 				feature3 = value; EntityModified();
 			}
 		}
-		public string Feature4
-		{
-			get => feature4; set
-			{
+		public string? Feature4 {
+			get => feature4;
+			set {
 				feature4 = value; EntityModified();
 			}
 		}
