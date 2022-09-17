@@ -1,6 +1,7 @@
 ﻿using BlackStone.Application.Interfaces;
 using BlackStone.Core.Entities;
 using BlackStone.Core.Models;
+using BlackStone.Core.ViewModels;
 
 namespace BlackStone.Application.Services {
 	public class UserService : IUserService {
@@ -20,7 +21,7 @@ namespace BlackStone.Application.Services {
 			throw new NotImplementedException();
 		}
 
-		public Task<User> Login(string loginName, string loginPassword) {
+		public Task<User> Login(LoginViewModel loginViewModel) {
 			throw new NotImplementedException();
 		}
 
