@@ -43,20 +43,20 @@ namespace BlackStone.Infrastructure.Logger {
 			if (!Log.IsEnabled(Serilog.Events.LogEventLevel.Debug)) return;
 			var trace = new StackTrace();
 			if (trace.FrameCount <= 1) return;
-			var declaringType = trace.GetFrame(1).GetMethod().DeclaringType;
+			var declaringType = trace?.GetFrame(1)?.GetMethod()?.DeclaringType;
 
 			if (declaringType != null)
-				LogDebug($"Entering {declaringType.Name}.{trace.GetFrame(1).GetMethod().Name}");
+				LogDebug($"Entering {declaringType.Name}.{trace?.GetFrame(1)?.GetMethod()?.Name}");
 		}
 
 		public void LogExit() {
 			if (!Log.IsEnabled(Serilog.Events.LogEventLevel.Debug)) return;
 			var trace = new StackTrace();
 			if (trace.FrameCount <= 1) return;
-			var declaringType = trace.GetFrame(1).GetMethod().DeclaringType;
+			var declaringType = trace?.GetFrame(1)?.GetMethod()?.DeclaringType;
 
 			if (declaringType != null)
-				LogDebug($"Exiting {declaringType.Name}.{trace.GetFrame(1).GetMethod().Name}");
+				LogDebug($"Exiting {declaringType.Name}.{trace?.GetFrame(1)?.GetMethod()?.Name}");
 		}
 	}
 }

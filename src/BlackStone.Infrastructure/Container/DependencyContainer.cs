@@ -1,5 +1,6 @@
 ﻿using BlackStone.Core.Interfaces;
 using BlackStone.Infrastructure.MemoryCache;
+using BlackStone.Persistance.Repositories;
 
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,11 +20,11 @@ namespace BlackStone.Infrastructure.Container {
 		}
 		private static void RepositoryRegistration(IServiceCollection services) {
 			//services.AddTransient<IBaseRepository, BaseRepository>();
-			//services.AddTransient<IAccountTypeRepository, AccountTypeRepository>();
-			//services.AddTransient<ICategoryRepository, CategoryRepository>();
-			//services.AddTransient<IUserRepository, UserRepository>();
-			//services.AddTransient<IRefreshTokenRepository, RefreshTokenRepository>();
-			//services.AddTransient<ILoginLogRepository, LoginLogRepository>();
+			services.AddTransient<IAccountTypeRepository, AccountTypeRepository>();
+			services.AddTransient<ICategoryRepository, CategoryRepository>();
+			services.AddTransient<IUserRepository, UserRepository>();
+			services.AddTransient<IRefreshTokenRepository, RefreshTokenRepository>();
+			services.AddTransient<ILoginLogRepository, LoginLogRepository>();
 			services.AddScoped<IMemoryCacheProvider, MemoryCacheProvider>();
 		}
 
