@@ -9,6 +9,5 @@ namespace BlackStone.Application.Interfaces {
 		Task<long> Signup(User user);
 		JWToken GenerateToken(Int64 userId, string userName);
 		string GenerateRefreshTokenKey();
-
 	}
 }
