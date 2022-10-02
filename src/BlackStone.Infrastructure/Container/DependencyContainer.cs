@@ -1,6 +1,7 @@
 ﻿using BlackStone.Application.Interfaces;
 using BlackStone.Application.Services;
 using BlackStone.Core.Interfaces;
+using BlackStone.Infrastructure.Logger;
 using BlackStone.Infrastructure.MemoryCache;
 using BlackStone.Persistance.Repositories;
 
@@ -31,7 +32,7 @@ namespace BlackStone.Infrastructure.Container {
 		}
 
 		private static void ApploggerRegistration(IServiceCollection services) {
-			//services.AddSingleton<IApplogger, Applogger>();
+			services.AddSingleton<IApplogger, Applogger>();
 		}
 	}
 }
